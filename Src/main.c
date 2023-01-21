@@ -23,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "robot.h"
 
 /* USER CODE END Includes */
 
@@ -86,6 +87,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+  init_robot();
+  operate_robot();
 
   /* USER CODE END 2 */
 

@@ -18,12 +18,17 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
+#include "tim.h"
+#include "usart.h"
 #include "gpio.h"
-#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "robot.h"
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal_gpio.h"
+#include "stm32f4xx_hal_tim.h"
 
 /* USER CODE END Includes */
 
@@ -86,6 +91,11 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_TIM9_Init();
+  MX_TIM10_Init();
+  MX_TIM14_Init();
+  MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 
   init_robot();
@@ -98,8 +108,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
-    printf("Test\n");
 
     /* USER CODE BEGIN 3 */
   }
